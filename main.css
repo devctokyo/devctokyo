@@ -1,0 +1,266 @@
+html, body {
+    width: 100vw;
+    margin: 0 auto;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  
+  .margin-text{
+    margin: 0px 20px;
+  }
+  
+  .center-title{
+    color: #3B5997;
+    text-align: center;
+  }
+  
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-image{
+    width:1000px;  
+    position: absolute;
+    top: -55%;
+    left: 20%;
+    opacity: .1;
+  }
+  
+  .side-image{
+    width:800px; 
+    position: absolute; 
+    left: -10%;
+    opacity: .1;
+    z-index: 120;
+  }
+  
+  .header{
+    font-family: 'Roboto', sans-serif;
+    height: 700px;
+    background: linear-gradient(270deg, black, #3B5997);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .logo-header{
+    margin-top: 20px;
+    align-self: center;
+    height: 140px;
+  }
+  
+  .date-location{
+    margin-top: 80px;
+    display: flex;
+    align-self: center;
+    color: #00F2FF;
+    font-size: 1.2rem
+  }
+  
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+  
+  .event-description, .times, .join-group, .map{
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 700px;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .event-description{
+      background: url('assets/memphis-mini.png');
+  }
+  
+  .description-text{
+    width: 80%;
+    text-align: center;
+    font-size: 1.2rem;
+    align-self: center;
+    justify-self: center;
+    color: darkgrey;
+  }
+  .times{
+    background-color: rgb(240, 240, 240);
+  }
+  
+  .time-table{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .time-list, .event-list, .description-list{
+    color: black;
+    font-size: 1rem;
+    margin: 20px;
+  }
+  
+  .data-item{
+    height: 40px;
+    font-weight: bold;
+  }
+  
+  .join-group{
+    background: linear-gradient(270deg, black, #3B5997);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    color: #fff !important;
+    text-align: center;;
+  }
+  
+  .join-group > .center-title{
+    color: #fff;
+  }
+  
+  .map{
+    height: 800px;
+    width: 100%;
+    background-color: rgb(55, 120, 206);
+  }
+   
+  #map{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    position: relative;
+  }
+  
+  .map-text{
+    margin: 20px;
+    display: flex;
+    align-self: center;
+    color: #fff;
+    font-size: 1.2rem
+  }
+  
+  .footer{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100px;
+    text-align: center;
+    background: linear-gradient(270deg, #3B5997, black);
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    color: #00F2FF;
+  }
+  
+  @-webkit-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes AnimationName {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes AnimationName { 
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  
+  @media screen and (max-width: 1300px) {
+         .logo-header{
+          margin-top: 80px;
+          align-self: center;
+          height: 60px;
+        }
+        .header{
+          height: 500px;
+        }
+        .margin-text{
+          font-size: .6rem;
+        }
+        #address-text{
+          font-size: .5rem;
+        }
+        .side-image{
+          width:500px; 
+          position: absolute; 
+          left: -40%;
+          opacity: .1;
+          z-index: 120;
+        }
+          .header-image{
+          width:500px;   
+          position: absolute;
+          top: -30%;
+          left: -40%;
+          opacity: .1;
+        }
+  }
+  
+  @media screen and (max-width: 360px) {
+         .logo-header{
+          margin-top: 80px;
+          align-self: center;
+          height: 50px;
+        }
+        .header{
+          height: 500px;
+        }
+        .margin-text{
+          font-size: .6rem;
+        }
+        #address-text{
+          font-size: .5rem;
+        }
+        .side-image{
+          width:400px; 
+          position: absolute; 
+          left: -40%;
+          opacity: .1;
+          z-index: 120;
+        }
+          .header-image{
+          width:400px;   
+          position: absolute;
+          top: -30%;
+          left: -40%;
+          opacity: .1;
+        }
+  }
+  
+  a{
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* unvisited link */
+  a:link {
+    color: #00F2FF;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: lightcoral;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: orangered;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #00F2FF;
+  }
+  

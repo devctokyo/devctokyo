@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Facebook Developers Circle Tokyo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.css' rel='stylesheet' <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class='date-location'>
+        <p class="margin-text">Angel Hack Tokyo</p>
+      </div>
+      <img class="logo-header" src="assets/devLogF.png" alt="" />
+      <div class='date-location'>
+        <p class="margin-text">June 29th 2019</p>
+        <p class="margin-text">Ginza - Tokyo</p>
+      </div>
+      <div class='date-location'>
+        <p class="margin-text">#DevCTokyo</p>
+      </div>
+      <img class="header-image" src="assets/CoolOneVertical.png" alt="" />
+    </div>
+    <div class="content">
+      <div class="event-description">
+        <h1 class="center-title">Let's connect, Share and build!</h1>
+        <p class="description-text">
+          Welcome! This is a forum for developers in Tokyo who are interested in building on the Facebook platform to
+          interact and collaborate with developers who share similar interests.
+        </p>
+      </div>
+      <div class="times">
+        <h1 class="center-title">Angel Hack Tokyo</h1>
+        <h2 class="center-title">June 29th 2019</h2>
+        <div class="time-table">
+          <div class="time-list">
+            <p class="data-item">9:00 AM</p>
+            <p class="data-item">10:00 AM</p>
+            <p class="data-item">11:00 AM</p>
+            <p class="data-item">1:00 PM</p>
+            <p class="data-item">7:00 PM</p>
+          </div>
+          <div class="event-list">
+            <p class="data-item">Doors Open & Breakfast</p>
+            <p class="data-item">Opening Ceremony, Sponsor Welcomes, & Team Building</p>
+            <p class="data-item">Coding Kick Off</p>
+            <p class="data-item">Lunch</p>
+            <p class="data-item">Dinner</p>
+          </div>
+        </div>
+        <h2 class="center-title">June 30th 2019</h2>
+        <div class="time-table">
+          <div class="time-list">
+            <p class="data-item">8:00 AM</p>
+            <p class="data-item">12:00 PM</p>
+            <p class="data-item">1:00 PM</p>
+            <p class="data-item">2:00 PM</p>
+            <p class="data-item">4:00 PM</p>
+          </div>
+          <div class="event-list">
+            <p class="data-item">Breakfast</p>
+            <p class="data-item">Lunch</p>
+            <p class="data-item">Code Freeze & Submission Deadline of Submission</p>
+            <p class="data-item">Demos</p>
+            <p class="data-item">Winners are Announced / Prizes!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="join-group">
+      <img class="side-image" src="assets/CoolOneLeft.png" alt="" />
+      <h1 class="center-title">Further Information</h1>
+      <h3 class="center-title">Facebook</h3>
+      <p class="margin-text"> <a href="https://www.facebook.com/groups/DevCTokyo/" target="blank">Facebook Group Page</a></p>
+      <h3 class="center-title">Upcoming Event</h3>
+      <p class="margin-text"> <a href="https://www.routexinnovation.com/angelhacktokyo" target="blank">Angel Hack Tokyo</a></p>
+      <h3 class="center-title">Staff</h3>
+      <p class="margin-text"><a>Takayuki Omori</a></p>
+      <p class="margin-text"> <a href="https://github.com/f-teruhisa" target="blank">Teruhisa Fukumoto</a></p>
+      <p class="margin-text"> <a href="https://github.com/besutome" target="blank">Kazunari Nakata</a></p>
+    </div>
+    <div class="map">
+      <div class='map-text'>
+        <p class="margin-text" id="address-text">〒104-0061 東京都中央区銀座１丁目８−１９ キラリトギンザ１１階</p>
+      </div>
+      <div id='map'></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div></div>
+  </div>
+  </div>
+
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiemVhbHMtZGV2IiwiYSI6ImNqd2xmbWFrczAxdXEzeXA4eGszaDdxMXQifQ.Lxz5BRp3psctvZLBHuzfoA';
+    var v1 = new mapboxgl.LngLat(139.7685318, 35.6743921);
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/zeals-dev/cjwlfpplp8bpw1cqnzpd97tg9', // stylesheet location
+      center: v1, // starting position [lng, lat]
+      zoom: 15 // starting zoom
+    });
+    var marker = new mapboxgl.Marker()
+      .setLngLat(v1)
+      .addTo(map);
+    map.scrollZoom.disable();
+    var nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'top-left');
+  </script>
+</body>
+
+</html>
